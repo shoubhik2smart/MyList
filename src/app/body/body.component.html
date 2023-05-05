@@ -1,0 +1,15 @@
+<h2> My List </h2>
+
+<div>
+    <header>
+        <input type="text" placeholder="Enter your note here" [(ngModel)] = "newNote.content"/>
+        <button class="addBtn" (click) = "addBtnClick()" [disabled]="!newNote.content">Add</button>
+    </header>
+    
+    <ul *ngFor="let note of notesArr">
+        <li>{{note[1]}}</li>
+        <button class="delBtn" (click)="delBtnClick($event)" name={{note[0]}}>Delete</button>
+    </ul>
+</div>
+
+<h4>&copy; Made by Shoubhik Pal </h4>
